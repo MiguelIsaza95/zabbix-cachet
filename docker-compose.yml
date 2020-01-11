@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+        zabbix:
+            build: .
+            volumes:
+                    - /etc/zabbix-cachet.yml:/config.yml
+            deploy:
+                    replicas: 2
